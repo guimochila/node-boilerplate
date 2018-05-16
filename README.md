@@ -1,6 +1,6 @@
 # Basic Nodejs boilerplate — Ideal to start small projects
 
-<img alt="Botpress" height="150" src="https://zu.no/pho/yaneb/4.jpg?w=400">
+<img alt="Boilerplate" height="250" src="images/boilerplate.jpg">
 
 This is a basic NodeJS boiler plater for rapid development of prototypes. It has the following features:
 
