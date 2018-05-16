@@ -1,0 +1,52 @@
+{
+  "name": "node-boiler-plate",
+  "version": "0.0.1",
+  "description": "Very simple boilerplate to start a simple project",
+  "main": "start.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "precommit": "lint-staged",
+    "start": "node app.js"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint",
+      "git add"
+    ]
+  },
+  "keywords": [
+    "node",
+    "javascript",
+    "boilerplate",
+    "projects"
+  ],
+  "author": "Guilherme Scaldelai",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "connect-mongo": "^2.0.1",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
+    "express-validator": "^5.2.0",
+    "mongoose": "^5.1.1",
+    "passport": "^0.4.0",
+    "passport-local-mongoose": "^5.0.0",
+    "validator": "^10.2.0"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.7.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.0",
+    "parcel-bundler": "^1.8.1",
+    "prettier": "^1.11.1"
+  }
+}
