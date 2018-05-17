@@ -7,6 +7,7 @@ This is a basic NodeJS boiler plater for rapid development of prototypes. It has
 * [Authentication with Passport](https://www.passportjs.org/)
 * [Assets handled with ParcelJS](https://parceljs.org/)
 * [Eslint](https://eslint.org/) with [AirBnB](https://github.com/airbnb/javascript) rules(with some tweaks).
+* [Prettier](https://prettier.io/) configured with ESlint out of the box.
 * [View engine with Express-Handlebars](https://github.com/ericf/express-handlebars)
 
 ---
