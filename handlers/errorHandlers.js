@@ -37,7 +37,7 @@ exports.developmentErrors = (err, req, res, next) => {
   res.status(err.status || 500);
   res.format({
     'text/html': () => {
-      res.render('errors', { errorDetails });
+      res.render('errors', errorDetails);
     },
     'application/json': () => res.json(errorDetails),
   });
@@ -48,5 +48,5 @@ exports.developmentErrors = (err, req, res, next) => {
 */
 exports.errorRender = (err, req, res, next) => {
   res.status(err.status || 500);
-  res.render('index/errors', `${err.message}`);
+  res.render('errors', `${err.message}`);
 };

@@ -12,7 +12,7 @@ const passport = require('passport');
 const mongoose = require('mongoose');
 
 const helpers = require('./helpers');
-const errorHandler = require('./handlers/errorHandlers');
+const errorHandlers = require('./handlers/errorHandlers');
 
 // Load mongoose models
 require('./models/User');
@@ -35,7 +35,6 @@ const hbs = exphbs.create({
   extname: '.hbs',
   layoutsDir: 'views/layouts',
   partialsDir: [path.join(__dirname, 'views/partials')],
-  helpers,
 });
 app.engine('.hbs', hbs.engine);
 app.set('view engine', '.hbs');
@@ -72,13 +71,13 @@ app.use(expressValidator());
 app.use('/', routes);
 
 // Error Hanlding
-app.use(errorHandler.notFound);
+app.use(errorHandlers.notFound);
 
 if (app.get('env') === 'development') {
-  app.use(errorHandler.developmentErrors);
+  app.use(errorHandlers.developmentErrors);
 }
 
-app.use(errorHandler.errorRender);
+app.use(errorHandlers.errorRender);
 
 // Done! We export it so we can use in the start.js file
 module.exports = app;
