@@ -6,20 +6,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "precommit": "lint-staged",
-    "start": "node app.js"
+    "start": "node app.js",
+    "server": "nodemon ./start.js --ignore src/ --ignore public/",
+    "client": "parcel watch src/js/app.js -d public/js --out-file bundle.js",
+    "dev":
+      "concurrently 'npm run server' 'npm run client' --names '💻,📦' --prefix name"
   },
   "lint-staged": {
-    "*.js": [
-      "eslint",
-      "git add"
-    ]
+    "*.js": ["eslint", "git add"]
   },
-  "keywords": [
-    "node",
-    "javascript",
-    "boilerplate",
-    "projects"
-  ],
+  "keywords": ["node", "javascript", "boilerplate", "projects"],
   "author": "Guilherme Scaldelai",
   "license": "MIT",
   "dependencies": {
